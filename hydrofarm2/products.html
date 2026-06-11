@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Продукция | Вертикальная ферма</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,300&family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ВЕРХНЯЯ ПЛАНКА -->
+<div id="topBar">
+    <div id="topBarContainer">
+        <span id="topBarText">🌱 Вертикальная ферма — гидропоника для всех</span>
+        <span id="topBarPhone">+7 (913) 565-11-10</span>
+    </div>
+</div>
+
+<!-- ШАПКА С МЕНЮ -->
+<div id="header">
+    <div id="headerContainer">
+        <div id="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Логотип">
+                <span>Verti<br>grow</span>
+            </a>
+        </div>
+        <div id="nav">
+            <a href="index.html">Главная</a>
+            <a href="products.html">Продукция</a>
+            <a href="advantages.html">Преимущества</a>
+            <a href="about.html">О производстве</a>
+            <a href="contacts.html">Контакты</a>
+        </div>
+    </div>
+</div>
+
+<!-- ЗАГОЛОВОК СТРАНИЦЫ -->
+<div id="pageHeader">
+    <div id="pageHeaderContainer">
+        <h1>Наша продукция</h1>
+        <p>Свежая микрозелень, выращенная с заботой о вашем здоровье</p>
+    </div>
+</div>
+
+<!-- ПРОДУКЦИЯ (полный каталог) -->
+<div id="catalog">
+    <div id="catalogContainer">
+        <div class="catalogGrid">
+            <div class="catalogCard reveal reveal-delay-1">
+                <img src="images/product1.jpg" alt="Микрозелень рукола">
+                <h3>Микрозелень руколы</h3>
+                <p>Острый, ореховый вкус. Богата витаминами A, C, K, йодом, железом.</p>
+                <span class="price">390 ₽/кассета</span>
+                <span class="weight">Вес: 100 г</span>
+            </div>
+            <div class="catalogCard reveal reveal-delay-2">
+                <img src="images/product2.jpg" alt="Микрозелень базилик">
+                <h3>Микрозелень базилика</h3>
+                <p>Ароматный, пряный вкус. Антиоксиданты и эфирные масла.</p>
+                <span class="price">450 ₽/кассета</span>
+                <span class="weight">Вес: 100 г</span>
+            </div>
+            <div class="catalogCard reveal reveal-delay-3">
+                <img src="images/product3.jpg" alt="Микрозелень горошек">
+                <h3>Микрозелень горошка</h3>
+                <p>Сладкий, сочный вкус. Источник растительного белка.</p>
+                <span class="price">390 ₽/кассета</span>
+                <span class="weight">Вес: 100 г</span>
+            </div>
+            <div class="catalogCard reveal reveal-delay-4">
+                <img src="images/product4.jpg" alt="Микрозелень подсолнечник">
+                <h3>Микрозелень подсолнечника</h3>
+                <p>Нежный, ореховый вкус. Много железа и цинка.</p>
+                <span class="price">420 ₽/кассета</span>
+                <span class="weight">Вес: 100 г</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ПОДВАЛ -->
+<div id="footer">
+    <div id="footerContainer">
+        <p>© 2026 Verti Grow. Гидропоника для всех.</p>
+        <div id="socials">
+            <a href="https://t.me/bobafn52" target="_blank">Telegram</a> | 
+            <a href="https://www.instagram.com/washed.boba" target="_blank">Instagram</a> | 
+            <a href="https://t.me/maslumbabaland" target="_blank">Telegram (канал)</a>
+        </div>
+    </div>
+</div>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    if (!els.length) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+</body>
+</html>

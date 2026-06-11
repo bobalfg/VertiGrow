@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Преимущества | Вертикальная ферма</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,300&family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ВЕРХНЯЯ ПЛАНКА -->
+<div id="topBar">
+    <div id="topBarContainer">
+        <span id="topBarText">🌱 Вертикальная ферма — гидропоника для всех</span>
+        <span id="topBarPhone">+7 (913) 565-11-10</span>
+    </div>
+</div>
+
+<!-- ШАПКА С МЕНЮ -->
+<div id="header">
+    <div id="headerContainer">
+        <div id="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Логотип">
+                <span>Verti<br>grow</span>
+            </a>
+        </div>
+        <div id="nav">
+            <a href="index.html">Главная</a>
+            <a href="products.html">Продукция</a>
+            <a href="advantages.html">Преимущества</a>
+            <a href="about.html">О производстве</a>
+            <a href="contacts.html">Контакты</a>
+        </div>
+    </div>
+</div>
+
+<!-- ЗАГОЛОВОК СТРАНИЦЫ -->
+<div id="pageHeader">
+    <div id="pageHeaderContainer">
+        <h1>Наши преимущества</h1>
+        <p>Почему выбирают гидропонику и нашу ферму</p>
+    </div>
+</div>
+
+<!-- ПРЕИМУЩЕСТВА (полный список) -->
+<div id="advantagesFull">
+    <div id="advantagesFullContainer">
+        <div class="advantageFullItem reveal">
+            <div class="advFullIcon">🌱</div>
+            <div class="advFullText">
+                <h3>Экологичность и чистота</h3>
+                <p>Выращиваем без почвы — это исключает вредителей, болезни и необходимость в пестицидах. Наша микрозелень безопасна для всей семьи.</p>
+            </div>
+        </div>
+        <div class="advantageFullItem reveal">
+            <div class="advFullIcon">💧</div>
+            <div class="advFullText">
+                <h3>Экономия воды до 90%</h3>
+                <p>Питательный раствор циркулирует по замкнутому циклу, не испаряясь и не уходя в землю. Это экологично и ответственно.</p>
+            </div>
+        </div>
+        <div class="advantageFullItem reveal">
+            <div class="advFullIcon">🧪</div>
+            <div class="advFullText">
+                <h3>Точный контроль питания</h3>
+                <p>Датчики pH и электропроводности следят за составом раствора 24/7. Каждая партия микрозелени получает идеальный баланс.</p>
+            </div>
+        </div>
+        <div class="advantageFullItem reveal">
+            <div class="advFullIcon">⚡</div>
+            <div class="advFullText">
+                <h3>Скорость роста</h3>
+                <p>7–12 дней от семени до урожая — это в 3 раза быстрее, чем в грунте. Вы получаете свежую зелень круглый год.</p>
+            </div>
+        </div>
+        <div class="advantageFullItem reveal">
+            <div class="advFullIcon">🏭</div>
+            <div class="advFullText">
+                <h3>Современное производство</h3>
+                <p>Многоярусные стеллажи, LED-светильники с синим и красным спектром, автоматическая подача раствора — всё как в лучших лабораториях.</p>
+            </div>
+        </div>
+        <div class="advantageFullItem reveal">
+            <div class="advFullIcon">📦</div>
+            <div class="advFullText">
+                <h3>Свежесть и доставка</h3>
+                <p>Отправляем урожай в день срезки. Микрозелень приезжает к вам живой, сочной и максимально полезной.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ПОДВАЛ -->
+<div id="footer">
+    <div id="footerContainer">
+        <p>© 2026 Verti Grow. Гидропоника для всех.</p>
+        <div id="socials">
+            <a href="https://t.me/bobafn52" target="_blank">Telegram</a> | 
+            <a href="https://www.instagram.com/washed.boba" target="_blank">Instagram</a> | 
+            <a href="https://t.me/maslumbabaland" target="_blank">Telegram (канал)</a>
+        </div>
+    </div>
+</div>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    if (!els.length) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+</body>
+</html>
