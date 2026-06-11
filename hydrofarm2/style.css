@@ -880,7 +880,139 @@ html {
     background: rgba(0, 255, 136, 0.15);
     letter-spacing: 0.5px;
 }
-/* ========== ШРИФТ ДЛЯ ЛОГОТИПА ========== */
+/* ========== БЛОК "РАБОТНИКИ И ДОЛЖНОСТИ" ========== */
+#teamSection {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #f5faf4 0%, #ffffff 100%);
+}
+
+#teamContainer {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#teamContainer h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 36px;
+    color: #1b5e20;
+    margin-bottom: 12px;
+}
+
+#teamContainer > p {
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 60px;
+}
+
+#teamGrid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.teamCard {
+    background: white;
+    width: 320px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(27, 94, 32, 0.1);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    text-align: center;
+}
+
+.teamCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(27, 94, 32, 0.18);
+}
+
+.teamPhotoWrap {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.teamPhotoWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s ease;
+}
+
+.teamCard:hover .teamPhotoWrap img {
+    transform: scale(1.05);
+}
+
+.teamPhotoOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to top, white, transparent);
+}
+
+.teamInfo {
+    padding: 20px 25px 30px;
+}
+
+.teamRole {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #1b5e20;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    border: 1px solid #c8e6c9;
+}
+
+.teamInfo h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.teamInfo p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.55;
+}
+
+/* Адаптация */
+@media (max-width: 1024px) {
+    #teamContainer {
+        width: 95%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    #teamSection {
+        padding: 50px 0;
+    }
+    #teamContainer h2 {
+        font-size: 28px;
+    }
+    #teamContainer > p {
+        font-size: 14px;
+        margin-bottom: 35px;
+    }
+    .teamCard {
+        width: 90%;
+        max-width: 320px;
+    }
+}
+
+
 #logo span {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 22px;
